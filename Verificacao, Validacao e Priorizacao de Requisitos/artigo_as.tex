@@ -4,17 +4,18 @@
 %
 \documentclass[runningheads]{llncs}
 %
-%\usepackage{graphicx}
+\usepackage{graphicx}
 \usepackage[utf8]{inputenc}
 \usepackage[brazil]{babel}
 \usepackage{indentfirst}
+\usepackage[pdftex]{hyperref}
 
 % Used for displaying a sample figure. If possible, figure files should
 % be included in EPS format.
 %
 % If you use the hyperref package, please uncomment the following line
 % to display URLs in blue roman font according to Springer's eBook style:
-% \renewcommand\UrlFont{\color{blue}\rmfamily}
+\renewcommand\UrlFont{\color{blue}\rmfamily}
 
 \begin{document}
 %
@@ -24,17 +25,17 @@
 % an abbreviated paper title here
 %
 \author{Higor Dantas\inst{1}\orcidID{118110808},
-Ivyna Alves\inst{2}\orcidID{00000000}, Matheus Henrique\inst{3}\orcidID{118111780} e
-Thaís Toscano\inst{4}\orcidID{00000000}}
+Ivyna Alves\inst{2}\orcidID{115110057}, Matheus Justino\inst{3}\orcidID{118111780} e
+Thaís Toscano\inst{4}\orcidID{115111596}}
 %
-\authorrunning{F. Author et al.}
+\authorrunning{H. Dantas, I. Alves et al.}
 % First names are abbreviated in the running head.
 % If there are more than two authors, 'et al.' is used.
 %
 \institute{Universidade Federal de Campina Grande, Campina Grande - PB, Brasil
 \email{higor.dantas@ccc.ufcg.edu.br} \and
 \email{ivyna.alves@ccc.ufcg.edu.br} \and
-\email{matheus@ccc.ufcg.edu.br} \and
+\email{matheus.justino@ccc.ufcg.edu.br} \and
 \email{thais.toscano@ccc.ufcg.edu.br}}
 %
 \maketitle              % typeset the header of the contribution
@@ -51,9 +52,89 @@ The abstract should briefly summarize the contents of the paper in
 \section{Introdução}
 
 \section{Verificação}
+O principal papel dessa fase é observar se todos os requisitos funcionais e não-funcionais elucidados foram bem definidos, ou seja, não possuem ambiguidades, inconsistências e nem omissões. Logo, essa fase deve ser iniciada o quanto antes já que quanto mais adiantado o processo de desenvolvimento maior se torna o custo de realizar as devidas correções.
+
+Para isso, deve-se ao longo dessa fase realizar algumas verificações nas documentações geradas:
+
+\begin{itemize}
+    \item \textbf{Verificações de validade}: Uma funcionalidade do sistema pode depender de uma outra funcionalidade adicional ou diferente da relatada pela documentação.
+    \item \textbf{Verificações de consistência}: Uma funcionalidade não pode ter descrições diferentes ou restrições que se contradizem.
+    \item\textbf{Verificações de completude}: O documento deve conter todas as funções, e suas devidas descrições, necessárias aos usuários do sistema.
+    \item \textbf{Verificações de realismo}: Essa verificação é importante para passar a garantia de que todas funcionalidades descritas são possíveis de implementar, considerando o orçamento e o cronograma definido para o desenvolvimento do sistema.
+    \item \textbf{Verificabilidade}: Essa atividade garante que é possível escrever casos de testes que cubram todos os requisitos definidos para o sistema. Isso ajuda, principalmente, na redução de conflitos entre o cliente e o contratante.
+\end{itemize}
 
 \section{Validação}
 Segundo Ian Sommerville, finalidade da validação é assegurar que o sistema de software atenda às expectativas do cliente. Dessa maneira, esse processo representa a atividade em que obtemos o aceite do cliente sob determinado artefato. No cenário de engenharia de requisitos, esta atividade significa aprovar junto ao cliente os requisitos que foram especificados.
+
+\section{Técnicas de Verificação e Validação}
+As formas de realizar as validações e verificações de requisitos são divididas em duas categorias: estáticas e dinâmicas, de modo que está ultima se faz necessária para se ter o código em execução, diferentemente das estáticas, que não possui a dita funcionalidade. No tocante às atividades acima descritas, as referidas podem ser realizadas mediante a utilização de algumas técnicas, quais sejam as inspeções, os walkthroughs e os checklists.
+
+\subsection{Verificação e Validação Estática}
+
+\subsubsection{Inspeções}
+Esse processo possui o objetivo de observar defeitos antes que a fase de testes tenha início, porém existem diversas formas de ser executada, a forma tradicional foi criada por Fagan, em 1976. Porém, ao longo dos anos esse modelo passou por diversas modificações e atualmente o ideal é que pelo menos 4 pessoas participem podendo desempenhar mais de um papel.
+
+Os papéis são:
+\begin{itemize}
+    \item Autor: responsável pela descoberta de defeitos e suas correções.
+    \item Inspetor: deve encontrar erros ou inconsistências nos artefatos separados para inspeção.
+    \item Relator: registra os resultados das reuniões.
+    \item Moderador: papel que realiza o gerenciamento e busca facilitar a realização das inspeções, além de planejar todas as atividades.
+\end{itemize}
+
+Nas versões mais atuais costuma ter 6 fases basicamente, são elas:
+\begin{enumerate}
+    \item \textbf{Planejamento}: O moderador define o contexto que ocorrerá a inspeção, seleciona os usuários que desempenharão o papel de inspetor e distribui o material que passará pela inspeção.
+    \item \textbf{Detecção de defeitos}: Os inspetores selecionados anteriormente deve realizar uma atividade de detecção de defeitos, onde será produzido uma lista de desconformidades.
+    \item \textbf{Coleção de Defeitos}: O moderador reúne todas as listas produzidas pelos inspetores no passo anterior e elimina as discrepâncias repetidas, já que podem ser relatadas por mais de um inspetor.
+    \item \textbf{Discriminação de defeitos}: O moderador, o autor do documento e os inspetores realizam discussões das discrepâncias encontradas. Durante esse passo cada problema relatado receberá uma classificação entre falso positivo e defeito. Daí, os reais defeitos são repassados ao autor, que realizará as devidas correções.
+    \item \textbf{Retrabalho}: O autor realiza as correções dos problemas relatados no passo anterior.
+    \item \textbf{Continuação}: O autor repassa o material corrigido para o moderador, que irá realizar uma avaliação da necessidade de uma nova inspeção ou não.
+\end{enumerate}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=10cm]{inspecao.png}
+    \caption{Processo de Inspeção.}
+    Fonte: \cite{ref_article1}.
+    \label{fig:inspecao.png}
+\end{figure}
+
+\subsubsection{Walkthrough} É um processo menos rigoroso que o apresentado acima, onde costuma possuir de entre 3 e 5 participantes, com a possibilidade de desempenhar papel de autor, de líder de revisões ou de revisores.
+
+O processo inicia selecionando uma parte do sistema que deverá passar por uma avaliação de no máximo 2 horas, onde cada revisor simula a execução passo a passo no papel para que se detecte algum erro. Porém, é uma técnica bastante desestruturada e para ser bem sucedida é necessário que a equipe tenha bastante dedicação e eficiência.
+
+\subsection{Verificação e Validação Dinâmica}
+Sua principal forma é por meio da execução de testes, onde se executa o programa com entradas específicas e verifica se o comportamento tá dentro do esperado.
+
+A forma dinâmica busca responder, basicamente, três perguntas:
+
+\begin{enumerate}
+    \item \textit{Quando testar?} Está relacionado à fase de desenvolvimento.
+        \begin{itemize}
+            \item {Teste de unidade}: Consiste em testar a menor unidade.
+            \item {Teste de integração}: Verifica se os componentes funcionam quando estão em conjunto.
+            \item {Teste de sistema}: Avalia o software de forma integrada, como um usuário final.
+            \item {Teste de aceitação}: São testes que verificam funcionalidade e verifica se as mesmas estão de acordo com o esperado.
+            \item {Teste de regressão}: A cada nova versão do software deve-se executar todos os testes já realizados anteriormente.
+        \end{itemize}
+    \item \textit{O que testar?} Está relacionado com o tipo de teste que será realizado.
+        \begin{itemize}
+            \item {Teste de funcionalidade}: Testa os requisitos funcionais, de acordo com o documentado gerado inicialmente.
+            \item {Teste de interface}: Verifica se a navegabilidade e os objetivos da tela funcionam como esperado.
+            \item {Teste de desempenho}: Testa a capacidade de resposta do sistema a uma determinada solicitação.
+            \item {Teste de carga}: Analisa o funcionamento da aplicação exercendo sobre ela uma quantidade grande de usuários ao mesmo tempo.
+            \item {Teste de usabilidade}: Testa as questões que interfere na relação do sistema com o sistema (facilidade no uso, por exemplo).
+            \item {Teste de volume}: Tem a função de testar a quantidade de dados envolvidos.
+            \item {Teste de segurança}: Testa a segurança dos dados dos usuários da aplicação.
+        \end{itemize}
+    \item \textit{Como testar?} Utilizado quando se está preocupado apenas com as saídas ou com as estruturas internas.
+        \begin{itemize}
+            \item {Teste funcional da caixa-preta}: Usado quando a preocupação não é com o código produzido e sim com a saída esperada e obtida.
+            \item {Teste estrutural caixa-branca}: É o oposto do anterior, representa preocupação com a estrutura interna do sistema.
+        \end{itemize}
+\end{enumerate}
 
 
 \section{Priorização de Requisitos}
@@ -129,14 +210,22 @@ A utilidade desse modelo de prioridade é limitada pela capacidade da equipe de 
 % BibTeX users should specify bibliography style 'splncs04'.
 % References will then be sorted and formatted in the correct style.
 %
-% \bibliographystyle{splncs04}
 % \bibliography{mybibliography}
 %
+\bibliographystyle{splncs04}
 \begin{thebibliography}{}
 \bibitem{ref_book1}
 Wiegers, K., Beatty, J.: Software Requirements. 3ª ed. (2013).
+
 \bibitem{ref_book2}
 Sommerville, Ian. Engenharia de software. 9ª ed. (2011).
+
+\bibitem{ref_article1}
+Engenharia de Software Magazine. Ano 1, 1ª ed (2007), 68 -- 74. Acesso em: \url{https://profandreluisbelini.files.wordpress.com/2016/02/revista-engenharia-de-software-ano-1-1c2ba-edic3a7c3a3o.pdf}
+
+\bibitem{ref_article2}
+Dos Santos, C. W.: PROCESSO DE V&V APLICADO AO DESENVOLVIMENTO DE SOFTWARE DO NTIC. Alegrete (2015). Acesso em: \url{http://dspace.unipampa.edu.br/bitstream/riu/859/1/Processo\%20de\%20V\%26V\%20aplicado\%20ao\%20desenvolvimento\%20de\%20software\%20do\%20NTIC.pdf}
+
 \end{thebibliography}
 \end{document}
 
