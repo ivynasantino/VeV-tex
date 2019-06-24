@@ -1,0 +1,138 @@
+% This is samplepaper.tex, a sample chapter demonstrating the
+% LLNCS macro package for Springer Computer Science proceedings;
+% Version 2.20 of 2017/10/04
+%
+\documentclass[runningheads]{llncs}
+%
+%\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{indentfirst}
+
+% Used for displaying a sample figure. If possible, figure files should
+% be included in EPS format.
+%
+% If you use the hyperref package, please uncomment the following line
+% to display URLs in blue roman font according to Springer's eBook style:
+% \renewcommand\UrlFont{\color{blue}\rmfamily}
+
+\begin{document}
+%
+\title{Verificação, Validação e Priorização de Requisitos}
+%\titlerunning{Abbreviated paper title}
+% If the paper title is too long for the running head, you can set
+% an abbreviated paper title here
+%
+\author{Higor Dantas\inst{1}\orcidID{118110808},
+Ivyna Alves\inst{2}\orcidID{00000000}, Matheus Henrique\inst{3}\orcidID{118111780} e
+Thaís Toscano\inst{4}\orcidID{00000000}}
+%
+\authorrunning{F. Author et al.}
+% First names are abbreviated in the running head.
+% If there are more than two authors, 'et al.' is used.
+%
+\institute{Universidade Federal de Campina Grande, Campina Grande - PB, Brasil
+\email{higor.dantas@ccc.ufcg.edu.br} \and
+\email{ivyna.alves@ccc.ufcg.edu.br} \and
+\email{matheus@ccc.ufcg.edu.br} \and
+\email{thais.toscano@ccc.ufcg.edu.br}}
+%
+\maketitle              % typeset the header of the contribution
+%
+\begin{abstract}
+The abstract should briefly summarize the contents of the paper in
+15--250 words.
+
+\keywords{First keyword  \and Second keyword \and Another keyword.}
+\end{abstract}
+%
+%
+%
+\section{Introdução}
+
+\section{Verificação}
+
+\section{Validação}
+
+\section{Priorização de Requisitos}
+
+\subsection{Definição}
+A priorização é uma forma de lidar com demandas conflitantes por recursos limitados. Estabelecer a prioridade relativa de cada capacidade de produto permite planejar a construção para fornecer o maior valor com o menor custo, com isso o mesmo ajuda o projeto a fornecer o máximo valor comercial o mais rápido possível dentro das restrições do projeto.
+
+Até mesmo um projeto de tamanho médio pode ter dezenas de requisitos do usuário e centenas de requisitos funcionais. Para mantê-lo gerenciável, escolha um nível apropriado de abstração para a priorização - recursos, casos de uso, histórias de usuários ou requisitos funcionais. Dentro de um caso de uso, alguns fluxos alternativos podem ter uma prioridade mais alta que outros.
+
+Alan Davis (2005) indica que a priorização bem sucedida requer uma compreensão de seis questões: As necessidades dos clientes; A importância relativa dos requisitos para os clientes; O momento em que as capacidades precisam ser entregues; Requisitos que servem como predecessores para outros requisitos e outros relacionamentos entre requisitos; Quais requisitos devem ser implementados como um grupo; O custo para satisfazer cada requisito.
+
+Há requisitos que devem ser implementados juntos ou em uma sequência específica, pois não fará sentido implementar algo que não possa ser desfeito e/ou atualizado, por exemplo, você pode acabar escrevendo código para, digamos, aceitar pagamentos com cartão de crédito sem verificar se o cartão é válido, rejeitando cartões que foram relatados como roubados ou manipulando outras exceções.
+
+\subsection{Técnicas}
+
+Priorizar requisitos não é algo simples e devido a necessidade cada vez maior do uso de metodologias ágeis no desenvolvimento de softwares surgiram algumas técnicas que auxiliam nesse processo.
+
+\subsubsection{In or Out}
+É caracterizado pela formação de um grupo que tem interesse no projeto, o mesmo produz uma lista de requisitos e vão tomando decisões binárias: \textit{Este requisito está dentro ou fora?}
+
+\subsubsection{Pairwise comparison and rank ordering}
+O grupo envolvido no projeto atribui uma lista com uma sequência de prioridades exclusivas para cada requisito. Após concluída, faz-se comparações entre pares dentre todos eles, para que no final seja percebido qual membro de cada par tem maior prioridade.
+
+\subsubsection{Three-level scale}
+Essa abordagem de priorização agrupa os requisitos em três categorias: alta, média e baixa. Há alguns fatores para que sejam estabelecidos qual nível os requisitos estão. Os requisitos de alta prioridade são importantes e urgentes. Alternativamente, obrigações contratuais ou de conformidade podem ditar que um requisito específico deve ser incluído, ou pode haver razões comerciais convincentes para implementá-lo prontamente. Requisitos de prioridade média são importantes mas não são urgentes. Os requisitos de baixa prioridade não são importantes, nem urgentes, e ainda há uma quarta categoria onde diz que os requisitos parecem urgentes para alguns interessados, mas eles não são realmente importantes para alcançar os objetivos de negócios.\\
+
+Ao executar uma análise de priorização com a escala de três níveis, você precisa estar ciente das dependências de requisitos. Você terá problemas se um requisito de alta prioridade depender de outro classificado com prioridade mais baixa e, portanto, planejado para implementação posteriormente.
+
+\subsubsection{MoSCoW}
+As quatro letras maiúsculas representam quatro possíveis classificações de prioridade para os requisitos em um conjunto (IIBA 2009): 
+
+\begin{itemize}
+    \item Must: O requisito deve ser satisfeito para que a solução seja considerada um sucesso;
+    \item Should: O requisito é importante e deve ser incluído na solução, se possível, mas não é obrigatório para o sucesso;
+    \item Could: É uma capacidade desejável, mas que pode ser adiada ou eliminada. Implemente-o somente se o tempo e os recursos permitirem;
+    \item Won't: isso indica um requisito que não será implementado no momento, mas pode ser incluído em uma versão futura. 
+\end{itemize}
+
+Esse esquema altera a escala de três níveis para uma escala de quatro, ele não oferece nenhuma justificativa para tomar a decisão sobre como classificar a prioridade de um determinado requisito em comparação a outros. Ele também possui ambiguidade quanto ao tempo, particularmente quando se trata da classificação "Won't". "Não" pode significar "não no próximo lançamento" ou "nunca", com isso, esta técnica não é recomendada.
+
+\subsubsection{\$100 (hundred-dollar)}
+Esta técnica consiste em dar à equipe de priorização 100 dólares imaginários para trabalhar, os mesmos alocam esses dólares para “comprar” itens que eles gostariam de ter implementado do conjunto completo de requisitos do candidato. Eles ponderam os requisitos de prioridade mais alta alocando mais dólares a eles. Se um requisito for três vezes mais importante para um interessado do que outro requisito, ela atribui talvez nove dólares ao primeiro requisito e três dólares ao segundo, desta forma faz com que os participantes realizem suas próprias alocações de dólares e, em seguida, somem o número total de dólares atribuídos a cada requisito para ver quais deles, coletivamente, têm a prioridade mais alta.
+
+\subsection{Priorização baseada em valor, custo e risco}
+
+Uma maneira definitiva e rigorosa de relacionar o valor do cliente aos recursos do produto proposto é com uma técnica chamada Implantação da Função de Qualidade, ou QFD (Cohen 1995). 
+Os participantes típicos no processo de priorização incluem o gerente de projetos ou analista de negócios, que lidera o processo, arbitra conflitos e ajusta os dados de priorização recebidos dos outros participantes, se necessário, e os representantes do cliente que fornecem as classificações de benefício e penalidade.
+
+Representantes de desenvolvimento, que fornecem as classificações de custo e risco:
+
+\begin{enumerate}
+    \item Listar em uma planilha todos os recursos, casos de uso, fluxos de casos de uso, histórias de usuários ou requisitos funcionais que você deseja priorizar uns contra os outros. Usamos recursos no exemplo. Todos os itens devem estar no mesmo nível de abstração: não misture requisitos funcionais com recursos, casos de uso ou histórias de usuários.
+    \item Classificar de 1 a 9 os benefícios relativos ao cliente de cada requisito (1 indica que ninguém consideraria útil; 9 significa que seria extremamente valioso).
+    \item Classificar de 1 a 9 as penalidades caso aquele requisito não seja incluído no projeto (1 significa que ninguém ficará chateado se estiver ausente; 9 indica uma desvantagem séria).
+    \item A planilha calcula o valor total de cada característica como a soma de suas pontuações de benefício e penalidade. A planilha soma os valores de todos os recursos e calcula a porcentagem do valor total que vem de cada um dos recursos (a coluna Valor\%).
+    \item Classificar de 1 a 9 os custos relativos da implementação, pelos desenvolvedores, (1 -- rápido e fácil -- a 9 -- demorado e caro). Os desenvolvedores estimam as classificações de custo com base na complexidade do recurso, na extensão do trabalho da interface do usuário necessária, na capacidade potencial de reutilizar o código existente, na quantidade de testes necessária e assim por diante.
+    \item Classificar de 1 a 9 o risco técnico relativo. O risco técnico é a probabilidade de não obter o recurso logo na primeira tentativa. Uma classificação de grau 1 significa que o risco é baixíssimo, enquanto que 9 indica sérias preocupações sobre a viabilidade, a falta de conhecimento necessário sobre a equipe, o uso de ferramentas e tecnologias desconhecidas, ou a preocupação com a quantidade de complexidade escondida dentro do requisito.
+    \item Depois de inserir todas as estimativas na planilha, deve-se calcular um valor de prioridade para cada recurso usando a seguinte fórmula: 
+        \begin{equation}
+            priority = value\% / (cost\% + risk\%)
+        \end{equation}
+    \item Por fim, deve-se classificar a lista de recursos em ordem decrescente por prioridade calculada, a coluna mais à direita. Os recursos no topo da lista têm o balanço de valor, custo e risco mais favorável e, portanto, todos os outros fatores sendo iguais devem ter a prioridade mais alta. 
+\end{enumerate}
+
+A utilidade desse modelo de prioridade é limitada pela capacidade da equipe de estimar o benefício, a penalidade, o custo e o risco de cada item
+
+
+
+
+%
+% ---- Bibliography ----
+%
+% BibTeX users should specify bibliography style 'splncs04'.
+% References will then be sorted and formatted in the correct style.
+%
+% \bibliographystyle{splncs04}
+% \bibliography{mybibliography}
+%
+\begin{thebibliography}{}
+\bibitem{ref_book1}
+Wiegers, K., Beatty, J.: Software Requirements. 3ª ed. (2013).
+\end{thebibliography}
+\end{document}
+
