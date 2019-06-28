@@ -28,7 +28,7 @@
 Ivyna Alves\inst{2}\orcidID{115110057}, Matheus Justino\inst{3}\orcidID{118111780} e
 Thaís Toscano\inst{4}\orcidID{115111596}}
 %
-\authorrunning{H. Dantas, I. Alves et al.}
+\authorrunning{H. Dantas et al.}
 % First names are abbreviated in the running head.
 % If there are more than two authors, 'et al.' is used.
 %
@@ -41,7 +41,7 @@ Thaís Toscano\inst{4}\orcidID{115111596}}
 \maketitle              % typeset the header of the contribution
 %
 \begin{abstract}
-Uma das dificuldades enfrentadas no desenvolvimento de software é entender bem os requisitos e, em seguida, reproduzí-los no sistema, já que a linguagem natural tem como forte característica a ambiguidade. Sendo assim, a compreensão de um requisito de forma errônea, traz grandes prejuízos para o projeto, já que fará que a equipe aloque mais tempo para modificar o que já foi implementado, perdendo assim, tempo de desenvolvimento. Dessa maneira, a utilização de estratégias de prioridade e verificação e validação de requisitos são importantes para o ciclo de vida de desenvolvimento do software, já que tem o objetivo de evitar tais erros. Diante disso, o trabalho a seguir mostrará estratégias para o elaboração do sistema de forma eficiente e segura.
+Uma das dificuldades enfrentadas no desenvolvimento de software é entender bem os requisitos e, em seguida, reproduzi-los no sistema, já que a linguagem natural tem como forte característica a ambiguidade. Sendo assim, a compreensão de um requisito de forma errônea, traz grandes prejuízos para o projeto, já que fará que a equipe aloque mais tempo para modificar o que já foi implementado, perdendo assim, tempo de desenvolvimento. Dessa maneira, a utilização de estratégias de priorização, verificação e validação de requisitos são importantes para o ciclo de vida de desenvolvimento do software, já que tem o objetivo de evitar tais erros. Diante disso, o trabalho a seguir mostrará estratégias para o elaboração do sistema de forma eficiente e segura.
 
 \keywords{Verificação e validação  \and Requisitos \and Software.}
 \end{abstract}
@@ -51,11 +51,11 @@ Uma das dificuldades enfrentadas no desenvolvimento de software é entender bem 
 \section{Introdução}
 Um dos grandes desafios para engenharia de software é captar corretamente os requisitos de um sistema. Dessa maneira, podemos elencar o quão é importante o desenvolvimento de técnicas para verificação e validação de requisitos.
 
-Tendo em vista a afirmação feita acima, podemos contar com estratégias para esse desafio, como a priorizar os requisitos, sempre validar o com cliente os requisitos que estão sendo desenvolvidos e criar com corpo de testes, com o intuito de verificar se as funcionalidades implementadas estão sendo implementadas da forma correta.
+Tendo em vista a afirmação feita acima, podemos contar com estratégias para esse desafio, como priorizar os requisitos, sempre validar com o cliente os requisitos que estão sendo desenvolvidos e criar um corpo de testes, com o intuito de verificar se as funcionalidades foram implementadas da forma correta.
 
 Este processo trata da validação quanto à consistência, precisão, contextualização de requisitos levantados no processo de identificação, descoberta, análise e negociação de requisitos. Sendo assim, envolve a revisão de todos os requisitos levantados e negociados, assim como uma validação de modelos e teste de requisitos, com um grande peso para a engenharia de requisitos, pois com um documento de requisitos bem definido, permite a correção de incoerências e inconformidades no desenvolvimento de um produto de software. Por isso, a validação permite minimizar o tempo gasto desses problemas.
 
-Na mesma vertente, também temos a verificação tem o objetivo de avaliar se o que foi planejado realmente foi realizado. Ou seja, se os requisitos e funcionalidades documentados foram implementados de forma correta. Segundo (SOMMERVILLE, 2011)\cite{ref_book2}, esse processo envolve verificar se o software está de acordo com suas especificações. Você deve verificar se ele atende aos requisitos funcionais e não funcionais.
+Na mesma vertente, também temos a verificação onde busca-se avaliar se o que foi planejado realmente foi realizado. Em outras palavras, se os requisitos e funcionalidades documentados foram implementados da maneira correta. Segundo (SOMMERVILLE, 2011)\cite{ref_book2}, esse processo envolve verificar se o software está de acordo com suas especificações. Logo, é preciso verificar se ele atende aos requisitos funcionais e não funcionais.
 
 Conforme (SANTOS, 2015)\cite{ref_article2}, o processo verificação e validação, define que cada produto ou artefato elaborado durante o ciclo de desenvolvimento do software seja avaliado, verificado, validado e testado em cada etapa antes de seguir para a próxima etapa, assegurando que os mesmos estejam completos e corretos, seguindo as exigências de verificação e validação. 
 
@@ -64,7 +64,7 @@ Diante disso, podemos valorizar tal processo, pois economiza o tempo de implemen
 \section{Verificação}
 O principal papel dessa fase é observar se todos os requisitos funcionais e não-funcionais elucidados foram bem definidos, ou seja, não possuem ambiguidades, inconsistências e nem omissões. Logo, essa fase deve ser iniciada o quanto antes já que quanto mais adiantado o processo de desenvolvimento maior se torna o custo de realizar as devidas correções.
 
-Para isso, deve-se ao longo dessa fase realizar algumas verificações nas documentações geradas:
+Para isso, deve-se ao longo dessa fase realizar algumas verificações nas documentações geradas em fases anteriores no processo. São elas:
 
 \begin{itemize}
     \item \textbf{Verificações de validade}: Uma funcionalidade do sistema pode depender de uma outra funcionalidade adicional ou diferente da relatada pela documentação.
@@ -78,12 +78,13 @@ Para isso, deve-se ao longo dessa fase realizar algumas verificações nas docum
 Segundo (SOMMERVILLE, 2011)\cite{ref_book2}, finalidade da validação é assegurar que o sistema de software atenda às expectativas do cliente. Dessa maneira, esse processo representa a atividade em que obtemos o aceite do cliente sob determinado artefato. No cenário de engenharia de requisitos, esta atividade significa aprovar junto ao cliente os requisitos que foram especificados.
 
 \section{Técnicas de Verificação e Validação}
-As formas de realizar as validações e verificações de requisitos são divididas em duas categorias: estáticas e dinâmicas, de modo que está ultima se faz necessária para se ter o código em execução, diferentemente das estáticas, que não possui a dita funcionalidade. No tocante às atividades acima descritas, as referidas podem ser realizadas mediante a utilização de algumas técnicas, quais sejam as inspeções, os walkthroughs e os checklists.
+As formas de realizar as validações e verificações de requisitos são divididas em duas categorias: estáticas e dinâmicas, de modo que esta última se faz necessária ter o código em execução, diferentemente das estáticas, que não possui a dita funcionalidade. No tocante às atividades acima descritas, as referidas podem ser realizadas mediante a utilização de algumas técnicas, quais sejam as inspeções, os walkthroughs e os checklists.
 
 \subsection{Verificação e Validação Estática}
 
 \subsubsection{Inspeções}
-Esse processo possui o objetivo de observar defeitos antes que a fase de testes tenha início, porém existem diversas formas de ser executada, a forma tradicional foi criada por Fagan, em 1976. Porém, ao longo dos anos esse modelo passou por diversas modificações e atualmente o ideal é que pelo menos 4 pessoas participem podendo desempenhar mais de um papel.
+
+Esse processo possui o objetivo de observar defeitos antes que a fase de testes tenha início, porém existem diversas formas de ser executada, a forma tradicional foi criada por Fagan, em 1986. Contudo, o processo passou por modernizações que fizeram com que esta técnica se adaptasse melhor às formas de desenvolvimento atuais. Logo, atualmente se trabalha com pelo menos 4 pessoas que podem desempenhar mais de um papel.
 
 Os papéis são:
 \begin{itemize}
@@ -93,10 +94,11 @@ Os papéis são:
     \item Moderador: papel que realiza o gerenciamento e busca facilitar a realização das inspeções, além de planejar todas as atividades.
 \end{itemize}
 
+
 Nas versões mais atuais costuma ter 6 fases basicamente, são elas:
 \begin{enumerate}
     \item \textbf{Planejamento}: O moderador define o contexto que ocorrerá a inspeção, seleciona os usuários que desempenharão o papel de inspetor e distribui o material que passará pela inspeção.
-    \item \textbf{Detecção de defeitos}: Os inspetores selecionados anteriormente deve realizar uma atividade de detecção de defeitos, onde será produzido uma lista de desconformidades.
+    \item \textbf{Detecção de defeitos}: Os inspetores selecionados anteriormente devem realizar uma atividade de detecção de defeitos, onde será produzido uma lista de desconformidades.
     \item \textbf{Coleção de Defeitos}: O moderador reúne todas as listas produzidas pelos inspetores no passo anterior e elimina as discrepâncias repetidas, já que podem ser relatadas por mais de um inspetor.
     \item \textbf{Discriminação de defeitos}: O moderador, o autor do documento e os inspetores realizam discussões das discrepâncias encontradas. Durante esse passo cada problema relatado receberá uma classificação entre falso positivo e defeito. Daí, os reais defeitos são repassados ao autor, que realizará as devidas correções.
     \item \textbf{Retrabalho}: O autor realiza as correções dos problemas relatados no passo anterior.
@@ -111,7 +113,9 @@ Nas versões mais atuais costuma ter 6 fases basicamente, são elas:
     \label{fig:inspecao.png}
 \end{figure}
 
-\subsubsection{Walkthrough} É um processo menos rigoroso que o apresentado acima, onde costuma possuir de entre 3 e 5 participantes, com a possibilidade de desempenhar papel de autor, de líder de revisões ou de revisores.
+\subsubsection{Walkthrough} 
+
+É um processo menos rigoroso que o apresentado acima, onde costuma possuir de entre 3 e 5 participantes, com a possibilidade de desempenhar papel de autor, de líder de revisões ou de revisores.
 
 O processo inicia selecionando uma parte do sistema que deverá passar por uma avaliação de no máximo 2 horas, onde cada revisor simula a execução passo a passo no papel para que se detecte algum erro. Porém, é uma técnica bastante desestruturada e para ser bem sucedida é necessário que a equipe tenha bastante dedicação e eficiência.
 
@@ -121,31 +125,30 @@ Sua principal forma é por meio da execução de testes, onde se executa o progr
 A forma dinâmica busca responder, basicamente, três perguntas:
 
 \begin{enumerate}
-    \item \textit{Quando testar?} Está relacionado à fase de desenvolvimento.
+    \item \textit{Quando testar?} Onde se está relacionado basicamente à fase de desenvolvimento, que são testes que incluem todas as atividades de testes efetuadas pelos desenvolvedores do sistema.
         \begin{itemize}
             \item {Teste de unidade}: Consiste em testar a menor unidade.
             \item {Teste de integração}: Verifica se os componentes funcionam quando estão em conjunto.
             \item {Teste de sistema}: Avalia o software de forma integrada, como um usuário final.
-            \item {Teste de aceitação}: São testes que verificam funcionalidade e verifica se as mesmas estão de acordo com o esperado.
-            \item {Teste de regressão}: A cada nova versão do software deve-se executar todos os testes já realizados anteriormente.
+            \item {Teste de aceitação}: São testes que verificam funcionalidades e verificam se as mesmas estão de acordo com o esperado.
+            \item {Teste de regressão}: A cada nova versão do software deve-se executar todos os testes já realizados anteriormente. Isso deve ser feito, pois ajuda a verificar se alguma modificação recente causou algum efeito indesejado
         \end{itemize}
     \item \textit{O que testar?} Está relacionado com o tipo de teste que será realizado.
         \begin{itemize}
-            \item {Teste de funcionalidade}: Testa os requisitos funcionais, de acordo com o documentado gerado inicialmente.
+            \item {Teste de funcionalidade}: Testa os requisitos funcionais, considerando o documentado gerado inicialmente.
             \item {Teste de interface}: Verifica se a navegabilidade e os objetivos da tela funcionam como esperado.
             \item {Teste de desempenho}: Testa a capacidade de resposta do sistema a uma determinada solicitação.
-            \item {Teste de carga}: Analisa o funcionamento da aplicação exercendo sobre ela uma quantidade grande de usuários ao mesmo tempo.
-            \item {Teste de usabilidade}: Testa as questões que interfere na relação do sistema com o sistema (facilidade no uso, por exemplo).
-            \item {Teste de volume}: Tem a função de testar a quantidade de dados envolvidos.
-            \item {Teste de segurança}: Testa a segurança dos dados dos usuários da aplicação.
+            \item {Teste de performance}: Analisa o funcionamento da aplicação diante três situações: o sistema sob condições normais de uso (teste de carga), o sistema diante de uma grande quantidade de transações e usuário simultaneamente (teste de stress), e ainda verifica se após um tempo o sistema ainda se mantém de forma satisfatória (teste de estabilidade).
+            \item {Teste de usabilidade}: Testa as questões que interfere na relação do sistema com o usuário (facilidade no uso, por exemplo).
+            \item {Teste de volume}: Tem a função de testar a quantidade de dados envolvidos em operações normais. Para isso, o teste envolve o banco de dados durante um longo período de tempo.
+            \item {Teste de segurança}: Testa a segurança do sistema diante de diversas formas de acessos ilegais.
         \end{itemize}
     \item \textit{Como testar?} Utilizado quando se está preocupado apenas com as saídas ou com as estruturas internas.
         \begin{itemize}
-            \item {Teste funcional da caixa-preta}: Usado quando a preocupação não é com o código produzido e sim com a saída esperada e obtida.
-            \item {Teste estrutural caixa-branca}: É o oposto do anterior, representa preocupação com a estrutura interna do sistema.
+            \item {Teste funcional da caixa-preta}: Usado quando a preocupação não é com o código produzido, e sim com a saída esperada e obtida.
+            \item {Teste estrutural caixa-branca}: É o oposto do anterior, pois representa uma preocupação com a estrutura interna do sistema.
         \end{itemize}
 \end{enumerate}
-
 
 \section{Priorização de Requisitos}
 
@@ -154,7 +157,15 @@ A priorização é uma forma de lidar com demandas conflitantes por recursos lim
 
 Até mesmo um projeto de tamanho médio pode ter dezenas de requisitos do usuário e centenas de requisitos funcionais. Para mantê-lo gerenciável, escolha um nível apropriado de abstração para a priorização - recursos, casos de uso, histórias de usuários ou requisitos funcionais. Dentro de um caso de uso, alguns fluxos alternativos podem ter uma prioridade mais alta que outros.
 
-Alan Davis (2005) indica que a priorização bem sucedida requer uma compreensão de seis questões: As necessidades dos clientes; A importância relativa dos requisitos para os clientes; O momento em que as capacidades precisam ser entregues; Requisitos que servem como predecessores para outros requisitos e outros relacionamentos entre requisitos; Quais requisitos devem ser implementados como um grupo; O custo para satisfazer cada requisito.
+(DAVIS, 2005) indica que a priorização bem sucedida requer uma compreensão de seis questões: 
+\begin{enumerate}
+    \item As necessidades dos clientes;
+    \item A importância relativa dos requisitos para os clientes;
+    \item O momento em que as capacidades precisam ser entregues;
+    \item Requisitos que servem como predecessores para outros requisitos e outros relacionamentos entre requisitos;
+    \item Quais requisitos devem ser implementados como um grupo;
+    \item  O custo para satisfazer cada requisito.
+\end{enumerate}
 
 Há requisitos que devem ser implementados juntos ou em uma sequência específica, pois não fará sentido implementar algo que não possa ser desfeito e/ou atualizado, por exemplo, você pode acabar escrevendo código para, digamos, aceitar pagamentos com cartão de crédito sem verificar se o cartão é válido, rejeitando cartões que foram relatados como roubados ou manipulando outras exceções.
 
@@ -169,7 +180,7 @@ Priorizar requisitos não é algo simples e devido a necessidade cada vez maior 
 O grupo envolvido no projeto atribui uma lista com uma sequência de prioridades exclusivas para cada requisito. Após concluída, faz-se comparações entre pares dentre todos eles, para que no final seja percebido qual membro de cada par tem maior prioridade.
 
 \subsubsection{Three-level scale}
-Essa abordagem de priorização agrupa os requisitos em três categorias: alta, média e baixa. Há alguns fatores para que sejam estabelecidos qual nível os requisitos estão. Os requisitos de alta prioridade são importantes e urgentes. Alternativamente, obrigações contratuais ou de conformidade podem ditar que um requisito específico deve ser incluído, ou pode haver razões comerciais convincentes para implementá-lo prontamente. Requisitos de prioridade média são importantes mas não são urgentes. Os requisitos de baixa prioridade não são importantes, nem urgentes, e ainda há uma quarta categoria onde diz que os requisitos parecem urgentes para alguns interessados, mas eles não são realmente importantes para alcançar os objetivos de negócios.\\
+Essa abordagem de priorização agrupa os requisitos em três categorias: alta, média e baixa. Há alguns fatores para que sejam estabelecidos qual nível os requisitos estão. Os requisitos de alta prioridade são importantes e urgentes. Alternativamente, obrigações contratuais ou de conformidade podem ditar que um requisito específico deve ser incluído, ou pode haver razões comerciais convincentes para implementá-lo prontamente. Requisitos de prioridade média são importantes mas não são urgentes. Os requisitos de baixa prioridade não são importantes, nem urgentes, e ainda há uma quarta categoria onde diz que os requisitos parecem urgentes para alguns interessados, mas eles não são realmente importantes para alcançar os objetivos de negócios.
 
 Ao executar uma análise de priorização com a escala de três níveis, você precisa estar ciente das dependências de requisitos. Você terá problemas se um requisito de alta prioridade depender de outro classificado com prioridade mais baixa e, portanto, planejado para implementação posteriormente.
 
@@ -186,7 +197,7 @@ As quatro letras maiúsculas representam quatro possíveis classificações de p
 Esse esquema altera a escala de três níveis para uma escala de quatro, ele não oferece nenhuma justificativa para tomar a decisão sobre como classificar a prioridade de um determinado requisito em comparação a outros. Ele também possui ambiguidade quanto ao tempo, particularmente quando se trata da classificação "Won't". "Não" pode significar "não no próximo lançamento" ou "nunca", com isso, esta técnica não é recomendada.
 
 \subsubsection{\$100 (hundred-dollar)}
-Esta técnica consiste em dar à equipe de priorização 100 dólares imaginários para trabalhar, os mesmos alocam esses dólares para “comprar” itens que eles gostariam de ter implementado do conjunto completo de requisitos do candidato. Eles ponderam os requisitos de prioridade mais alta alocando mais dólares a eles. Se um requisito for três vezes mais importante para um interessado do que outro requisito, ela atribui talvez nove dólares ao primeiro requisito e três dólares ao segundo, desta forma faz com que os participantes realizem suas próprias alocações de dólares e, em seguida, somem o número total de dólares atribuídos a cada requisito para ver quais deles, coletivamente, têm a prioridade mais alta.
+Esta técnica consiste em dar à equipe de priorização 100 dólares imaginários para trabalhar, os mesmos alocam esses dólares para “comprar” itens que eles gostariam de ver implementados do conjunto completo de requisitos do candidato. Eles ponderam os requisitos de prioridade mais alta alocando mais dólares a eles. Se um requisito for três vezes mais importante para um interessado do que outro requisito, ela atribui talvez nove dólares ao primeiro requisito e três dólares ao segundo, desta forma faz com que os participantes realizem suas próprias alocações de dólares e, em seguida, somem o número total de dólares atribuídos a cada requisito para ver quais deles, coletivamente, têm a prioridade mais alta.
 
 \subsection{Priorização baseada em valor, custo e risco}
 
@@ -201,7 +212,7 @@ Representantes de desenvolvimento, que fornecem as classificações de custo e r
     \item Classificar de 1 a 9 as penalidades caso aquele requisito não seja incluído no projeto (1 significa que ninguém ficará chateado se estiver ausente; 9 indica uma desvantagem séria).
     \item A planilha calcula o valor total de cada característica como a soma de suas pontuações de benefício e penalidade. A planilha soma os valores de todos os recursos e calcula a porcentagem do valor total que vem de cada um dos recursos (a coluna Valor\%).
     \item Classificar de 1 a 9 os custos relativos da implementação, pelos desenvolvedores, (1 -- rápido e fácil -- a 9 -- demorado e caro). Os desenvolvedores estimam as classificações de custo com base na complexidade do recurso, na extensão do trabalho da interface do usuário necessária, na capacidade potencial de reutilizar o código existente, na quantidade de testes necessária e assim por diante.
-    \item Classificar de 1 a 9 o risco técnico relativo. O risco técnico é a probabilidade de não obter o recurso logo na primeira tentativa. Uma classificação de grau 1 significa que o risco é baixíssimo, enquanto que 9 indica sérias preocupações sobre a viabilidade, a falta de conhecimento necessário sobre a equipe, o uso de ferramentas e tecnologias desconhecidas, ou a preocupação com a quantidade de complexidade escondida dentro do requisito.
+    \item Classificar de 1 a 9 o risco técnico relativo. O risco técnico é a probabilidade de não obter o recurso logo na primeira tentativa. Por exemplo, uma classificação de grau 1 significa que o risco é baixíssimo, enquanto que grau 9 indica sérias preocupações sobre a viabilidade, a falta de conhecimento necessário sobre a equipe, o uso de ferramentas e tecnologias desconhecidas, ou a preocupação com a quantidade de complexidade escondida dentro do requisito.
     \item Depois de inserir todas as estimativas na planilha, deve-se calcular um valor de prioridade para cada recurso usando a seguinte fórmula: 
         \begin{equation}
             priority = value\% / (cost\% + risk\%)
@@ -209,10 +220,12 @@ Representantes de desenvolvimento, que fornecem as classificações de custo e r
     \item Por fim, deve-se classificar a lista de recursos em ordem decrescente por prioridade calculada, a coluna mais à direita. Os recursos no topo da lista têm o balanço de valor, custo e risco mais favorável e, portanto, todos os outros fatores sendo iguais devem ter a prioridade mais alta. 
 \end{enumerate}
 
-A utilidade desse modelo de prioridade é limitada pela capacidade da equipe de estimar o benefício, a penalidade, o custo e o risco de cada item
+A utilidade desse modelo de prioridade é limitada pela capacidade da equipe de estimar o benefício, a penalidade, o custo e o risco de cada item.
 
 \section{Resultados}
-Diante do que foi exposto nos tópicos acima, podemos observar que as técnicas de verificação e validação andam lado a lado com o desenvolvimento saudável e a qualidade do sistema, pois em todo o ciclo de vida desse processo, os requisitos são testados e validados com cliente. Também temos como a aliado, técnicas de priorização de requisitos, que por sua vez auxilia na escolha da melhor forma de utilizar o tempo disponível. Logo, podemos concluir que esse tópico de engenharia de requisitos assegura a corretude do sistema e permite que as etapas do desenvolvimento do software seja entregue com qualidade.
+Diante do que foi exposto nos tópicos acima, podemos observar que as técnicas de verificação e validação andam lado a lado com o desenvolvimento saudável e a qualidade do sistema, pois em todo o ciclo de vida desse processo, os requisitos são testados e validados com cliente. Além disso, também temos como aliado as técnicas de priorização de requisitos, que por sua vez auxilia na escolha da melhor forma de utilizar o tempo disponível. Portanto, podemos concluir que esse tópico de engenharia de requisitos assegura a corretude do sistema e permite que as etapas do desenvolvimento do software seja entregue com qualidade.
+
+
 
 
 
