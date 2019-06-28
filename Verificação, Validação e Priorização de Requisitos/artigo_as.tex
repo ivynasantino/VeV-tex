@@ -28,7 +28,7 @@
 Ivyna Alves\inst{2}\orcidID{115110057}, Matheus Justino\inst{3}\orcidID{118111780} e
 Thaís Toscano\inst{4}\orcidID{115111596}}
 %
-\authorrunning{H. Dantas, I. Alves et al.}
+\authorrunning{H. Dantas et al.}
 % First names are abbreviated in the running head.
 % If there are more than two authors, 'et al.' is used.
 %
@@ -83,6 +83,7 @@ As formas de realizar as validações e verificações de requisitos são dividi
 \subsection{Verificação e Validação Estática}
 
 \subsubsection{Inspeções}
+
 Esse processo possui o objetivo de observar defeitos antes que a fase de testes tenha início, porém existem diversas formas de ser executada, a forma tradicional foi criada por Fagan, em 1986. Contudo, o processo passou por modernizações que fizeram com que esta técnica se adaptasse melhor às formas de desenvolvimento atuais. Logo, atualmente se trabalha com pelo menos 4 pessoas que podem desempenhar mais de um papel.
 
 Os papéis são:
@@ -92,6 +93,7 @@ Os papéis são:
     \item Relator: registra os resultados das reuniões.
     \item Moderador: papel que realiza o gerenciamento e busca facilitar a realização das inspeções, além de planejar todas as atividades.
 \end{itemize}
+
 
 Nas versões mais atuais costuma ter 6 fases basicamente, são elas:
 \begin{enumerate}
@@ -111,7 +113,9 @@ Nas versões mais atuais costuma ter 6 fases basicamente, são elas:
     \label{fig:inspecao.png}
 \end{figure}
 
-\subsubsection{Walkthrough} É um processo menos rigoroso que o apresentado acima, onde costuma possuir de entre 3 e 5 participantes, com a possibilidade de desempenhar papel de autor, de líder de revisões ou de revisores.
+\subsubsection{Walkthrough} 
+
+É um processo menos rigoroso que o apresentado acima, onde costuma possuir de entre 3 e 5 participantes, com a possibilidade de desempenhar papel de autor, de líder de revisões ou de revisores.
 
 O processo inicia selecionando uma parte do sistema que deverá passar por uma avaliação de no máximo 2 horas, onde cada revisor simula a execução passo a passo no papel para que se detecte algum erro. Porém, é uma técnica bastante desestruturada e para ser bem sucedida é necessário que a equipe tenha bastante dedicação e eficiência.
 
@@ -153,7 +157,15 @@ A priorização é uma forma de lidar com demandas conflitantes por recursos lim
 
 Até mesmo um projeto de tamanho médio pode ter dezenas de requisitos do usuário e centenas de requisitos funcionais. Para mantê-lo gerenciável, escolha um nível apropriado de abstração para a priorização - recursos, casos de uso, histórias de usuários ou requisitos funcionais. Dentro de um caso de uso, alguns fluxos alternativos podem ter uma prioridade mais alta que outros.
 
-Alan Davis (2005) indica que a priorização bem sucedida requer uma compreensão de seis questões: As necessidades dos clientes; A importância relativa dos requisitos para os clientes; O momento em que as capacidades precisam ser entregues; Requisitos que servem como predecessores para outros requisitos e outros relacionamentos entre requisitos; Quais requisitos devem ser implementados como um grupo; o custo para satisfazer cada requisito.
+(DAVIS, 2005) indica que a priorização bem sucedida requer uma compreensão de seis questões: 
+\begin{enumerate}
+    \item As necessidades dos clientes;
+    \item A importância relativa dos requisitos para os clientes;
+    \item O momento em que as capacidades precisam ser entregues;
+    \item Requisitos que servem como predecessores para outros requisitos e outros relacionamentos entre requisitos;
+    \item Quais requisitos devem ser implementados como um grupo;
+    \item  O custo para satisfazer cada requisito.
+\end{enumerate}
 
 Há requisitos que devem ser implementados juntos ou em uma sequência específica, pois não fará sentido implementar algo que não possa ser desfeito e/ou atualizado, por exemplo, você pode acabar escrevendo código para, digamos, aceitar pagamentos com cartão de crédito sem verificar se o cartão é válido, rejeitando cartões que foram relatados como roubados ou manipulando outras exceções.
 
